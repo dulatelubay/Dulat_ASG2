@@ -1,12 +1,5 @@
 package Assignment2.Composite;
-import Assignment2.Adapter.PDFDocumentAdapter;
-import Assignment2.Bridge.HighlightRenderEngine;
-import Assignment2.Bridge.RenderEngine;
-import Assignment2.Bridge.SimpleRenderEngine;
-import Assignment2.Composite.DocumentGroup;
-import Assignment2.Facade.DocumentFacade;
-import Assignment2.*;
-import Assignment2.Flyweight.DocumentFactory;
+
 import Assignment2.Document;
 
 import java.util.ArrayList;
