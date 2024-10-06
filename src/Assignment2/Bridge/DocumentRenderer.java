@@ -10,3 +10,4 @@ public abstract class DocumentRenderer {
 
     public abstract void render(String content);
 }
+

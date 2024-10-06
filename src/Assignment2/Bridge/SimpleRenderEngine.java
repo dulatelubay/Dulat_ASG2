@@ -7,3 +7,4 @@ public class SimpleRenderEngine implements RenderEngine {
         System.out.println("Rendering document in simple mode: " + content);
     }
 }
+

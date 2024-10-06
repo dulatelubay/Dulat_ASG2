@@ -10,13 +10,12 @@ public class RealDocument implements Document {
     }
 
     private void loadFromDisk() {
-        // Вывод сообщения о загрузке документа
-        System.out.println("Загрузка документа: " + title);
+        // Задача: Вывести сообщение о загрузке документа
     }
 
     @Override
     public void display() {
-        // Вывод сообщения об отображении документа
-        System.out.println("Отображение документа: " + title);
+        // Задача: Вывести сообщение об отображении документа
     }
 }
+

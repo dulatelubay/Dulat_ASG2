@@ -8,3 +8,4 @@ public class HighlightRenderEngine implements RenderEngine {
         System.out.println("Rendering document with highlighted text: " + content);
     }
 }
+

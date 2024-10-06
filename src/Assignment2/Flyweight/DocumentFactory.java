@@ -1,27 +1,28 @@
 package Assignment2.Flyweight;
 
 import Assignment2.Document;
-import Assignment2.RealDocument; // Импортируйте реализацию документа
+import Assignment2.Proxy.ProxyDocument;
+import Assignment2.RealDocument;
 
 import java.util.HashMap;
 import java.util.Map;
 
 // Фабрика для создания и переиспользования документов
 public class DocumentFactory {
-    private static final Map<String, Document> documentMap = new HashMap<>(); // Хранит документы
+    // Хранит все созданные документы для переиспользования
+    private static final Map<String, Document> documentMap = new HashMap<>();
 
-    // Метод для получения документа по заголовку
-    public Document getDocument(String title) {
-        // Проверяем, существует ли документ с таким заголовком
-        Document document = documentMap.get(title);
-
-        // Если документ не существует, создаем новый и добавляем в карту
-        if (document == null) {
-            document = new RealDocument(title); // Создаем новый реальный документ
-            documentMap.put(title, document); // Сохраняем документ в карте
+    // Задача: Реализуйте фабрику, которая будет хранить и переиспользовать документы,
+    // чтобы не создавать их повторно для одного и того же заголовка.
+    public static Document getDocument(String docName) {
+        // Проверяем, существует ли документ с данным заголовком в мапе
+        if (documentMap.containsKey(docName)) {
+            return documentMap.get(docName);
+        } else {
+            Document document = new ProxyDocument(docName);
+            documentMap.put(docName, document);
         }
-
-        return document; // Возвращаем документ (существующий или новый)
+        return documentMap.get(docName);
     }
 }
 

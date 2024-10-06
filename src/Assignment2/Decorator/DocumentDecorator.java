@@ -15,3 +15,4 @@ public abstract class DocumentDecorator implements Document {
         decoratedDocument.display();
     }
 }
+

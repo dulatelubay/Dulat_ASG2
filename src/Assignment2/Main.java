@@ -1,11 +1,3 @@
-package Assignment2;
-import Assignment2.Adapter.PDFDocumentAdapter;
-import Assignment2.Bridge.HighlightRenderEngine;
-import Assignment2.Bridge.RenderEngine;
-import Assignment2.Bridge.SimpleRenderEngine;
-import Assignment2.Composite.DocumentGroup;
-import Assignment2.Facade.DocumentFacade;
-import Assignment2.Flyweight.DocumentFactory;
 // public static void main(String[] args) throws CloneNotSupportedException {
 //        // Singleton: CoffeeShop instance
 //        CoffeeShopSingleton coffeeShop = CoffeeShopSingleton.getInstance();
@@ -38,10 +30,16 @@ import Assignment2.Flyweight.DocumentFactory;
 //}
 
 //Assigment2
-
-import Assignment2.Document;
-
-public class Main {
+package Assignment2;
+import Assignment2.Adapter.PDFDocumentAdapter;
+import Assignment2.Bridge.HighlightRenderEngine;
+import Assignment2.Bridge.RenderEngine;
+import Assignment2.Bridge.SimpleRenderEngine;
+import Assignment2.Composite.DocumentGroup;
+import Assignment2.Facade.DocumentFacade;
+import Assignment2.*;
+import Assignment2.Flyweight.DocumentFactory;
+public class Main{
     public static void main(String[] args) {
 
         DocumentFacade facade = new DocumentFacade();
