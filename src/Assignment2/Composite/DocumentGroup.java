@@ -7,22 +7,22 @@ import java.util.List;
 
 // Класс для работы с группами документов (категориями)
 public class DocumentGroup implements Document {
-    private List<Document> documents = new ArrayList<>(); // Список документов в группе
+    private List<Document> documents = new ArrayList<>();
 
     // Метод для добавления документа в группу
     public void addDocument(Document document) {
-        documents.add(document); // Добавляем документ в список
+        documents.add(document);
     }
 
     // Метод для удаления документа из группы
     public void removeDocument(Document document) {
-        documents.remove(document); // Удаляем документ из списка, если он есть
+        documents.remove(document);
     }
 
     // Метод для отображения всех документов в группе
     @Override
     public void display() {
-        System.out.println("Documents in the group:"); // Сообщение о начале отображения
+        System.out.println("Documents in the group:");
         for (Document document : documents) {
             document.display(); // Вызываем метод display() для каждого документа
         }

@@ -16,8 +16,7 @@ public class WatermarkDecorator extends DocumentDecorator {
         // Сначала отображаем декорируемый документ
         decoratedDocument.display();
 
-        // Затем добавляем водяной знак
-        addWatermark(); // Метод для добавления водяного знака
+        addWatermark();
     }
 
     // Метод для добавления водяного знака
