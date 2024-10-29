@@ -175,82 +175,96 @@
 //Assignment 4
 //import
 
-import Assignment4.observer.*;
-import Assignment4.state.*;
-import Assignment4.strategy.*;
-import Assignment4.templatemethod.*;
-import Assignment4.visitor.*;
+//import Assignment4.observer.*;
+//import Assignment4.state.*;
+//import Assignment4.strategy.*;
+//import Assignment4.templatemethod.*;
+//import Assignment4.visitor.*;
+
+//public class Main {
+  //  public static void main(String[] args) {
+// Testing Observer Pattern
+//        System.out.println("=== Observer Pattern ===");
+  //      NewsPublisher newsPublisher = new NewsPublisherImpl();
+    //    Observer smartphoneSubscriber = new NewsSubscriberSmartphone();
+      //  Observer laptopSubscriber = new NewsSubscriberLaptop();
+        //Observer tabletSubscriber = new NewsSubscriberTablet();
+
+//        newsPublisher.addObserver(smartphoneSubscriber);
+ //       newsPublisher.addObserver(laptopSubscriber);
+  //      newsPublisher.addObserver(tabletSubscriber);
+
+    //    newsPublisher.publishNews("Sport", "Local team wins the championship!");
+      //  newsPublisher.publishNews("Science", "New discovery in quantum physics.");
+        //newsPublisher.publishNews("General", "Breaking news!");
+
+   //     System.out.println();
+
+        // Testing State Pattern
+   //     System.out.println("=== State Pattern ===");
+    //    Player player = new Player();
+    //    player.play();
+    //    player.pause();
+     //   player.play();
+       // player.stop();
+
+       // System.out.println();
+
+        // Testing Strategy Pattern
+     //   System.out.println("=== Strategy Pattern ===");
+      //  Order order1 = new Order(1000, new CardPaymentStrategy());
+       // System.out.println("Final cost with Card Payment: " + order1.calculateFinalCost());
+
+     //   order1.setPaymentStrategy(new WalletPaymentStrategy());
+     //   System.out.println("Final cost with Wallet Payment: " + order1.calculateFinalCost());
+
+   //     order1.setPaymentStrategy(new CashOnDeliveryStrategy());
+     //   System.out.println("Final cost with Cash on Delivery: " + order1.calculateFinalCost());
+
+      //  System.out.println();
+
+        // Testing Template Method Pattern
+    //    System.out.println("=== Template Method Pattern ===");
+     //   QualityCheck foodCheck = new FoodQualityCheck();
+     //   foodCheck.checkQuality();
+
+     //   System.out.println();
+
+      //  QualityCheck electronicsCheck = new ElectronicsQualityCheck();
+      //  electronicsCheck.checkQuality();
+
+      //  System.out.println();
+
+        // Testing Visitor Pattern
+    //    System.out.println("=== Visitor Pattern ===");
+      //  File textFile = new TextFile("document.txt");
+      //  File executableFile = new ExecutableFile("program.exe");
+
+      //  Visitor antivirusVisitor = new AntivirusVisitor();
+      //  Visitor reportVisitor = new ReportVisitor();
+
+       // textFile.accept(antivirusVisitor);
+       /// executableFile.accept(antivirusVisitor);
+
+        //System.out.println();
+
+       // textFile.accept(reportVisitor);
+       // executableFile.accept(reportVisitor);
+   // }
+//}
+
+//Assignment 5
+
+import Assignment5.CalculatorModel;
+import Assignment5.CalculatorView;
+import Assignment5.CalculatorController;
 
 public class Main {
     public static void main(String[] args) {
-        // Testing Observer Pattern
-        System.out.println("=== Observer Pattern ===");
-        NewsPublisher newsPublisher = new NewsPublisherImpl();
-        Observer smartphoneSubscriber = new NewsSubscriberSmartphone();
-        Observer laptopSubscriber = new NewsSubscriberLaptop();
-        Observer tabletSubscriber = new NewsSubscriberTablet();
+        CalculatorModel model = new CalculatorModel();
+        CalculatorView view = new CalculatorView();
+        new CalculatorController(model, view);
 
-        newsPublisher.addObserver(smartphoneSubscriber);
-        newsPublisher.addObserver(laptopSubscriber);
-        newsPublisher.addObserver(tabletSubscriber);
-
-        newsPublisher.publishNews("Sport", "Local team wins the championship!");
-        newsPublisher.publishNews("Science", "New discovery in quantum physics.");
-        newsPublisher.publishNews("General", "Breaking news!");
-
-        System.out.println();
-
-        // Testing State Pattern
-        System.out.println("=== State Pattern ===");
-        Player player = new Player();
-        player.play();
-        player.pause();
-        player.play();
-        player.stop();
-
-        System.out.println();
-
-        // Testing Strategy Pattern
-        System.out.println("=== Strategy Pattern ===");
-        Order order1 = new Order(1000, new CardPaymentStrategy());
-        System.out.println("Final cost with Card Payment: " + order1.calculateFinalCost());
-
-        order1.setPaymentStrategy(new WalletPaymentStrategy());
-        System.out.println("Final cost with Wallet Payment: " + order1.calculateFinalCost());
-
-        order1.setPaymentStrategy(new CashOnDeliveryStrategy());
-        System.out.println("Final cost with Cash on Delivery: " + order1.calculateFinalCost());
-
-        System.out.println();
-
-        // Testing Template Method Pattern
-        System.out.println("=== Template Method Pattern ===");
-        QualityCheck foodCheck = new FoodQualityCheck();
-        foodCheck.checkQuality();
-
-        System.out.println();
-
-        QualityCheck electronicsCheck = new ElectronicsQualityCheck();
-        electronicsCheck.checkQuality();
-
-        System.out.println();
-
-        // Testing Visitor Pattern
-        System.out.println("=== Visitor Pattern ===");
-        File textFile = new TextFile("document.txt");
-        File executableFile = new ExecutableFile("program.exe");
-
-        Visitor antivirusVisitor = new AntivirusVisitor();
-        Visitor reportVisitor = new ReportVisitor();
-
-        textFile.accept(antivirusVisitor);
-        executableFile.accept(antivirusVisitor);
-
-        System.out.println();
-
-        textFile.accept(reportVisitor);
-        executableFile.accept(reportVisitor);
+        view.setVisible(true);
     }
 }
-
-
